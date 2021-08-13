@@ -34,7 +34,7 @@ public class UsedItemController {
 		}
 	}
 
-	// 새로운 중고 거래 저장
+	// 새로운 중고거래 저장
 	public static boolean addUsedItemUpload(UsedItemUploadDTO usedItemUpload) {
 		boolean result = false;
 		try {
@@ -47,7 +47,7 @@ public class UsedItemController {
 		return result;
 	}
 
-	// 모든 중고 물건 검색
+	// 모든 중고물건 검색
 	public static void getAllUsedItems() {
 		try {
 			RunEndView.uploadListView(UsedItemDAO.getAllUsedItems());
@@ -103,11 +103,11 @@ public class UsedItemController {
 	}
 
 	// 중고 물건 아이디로 물건 거래 상태 수정
-	public static void updateUsedItemStatus(String usedItemId, String usedItemStatus) {
+	public static void updateUsedItemStatus(String usedItemId, String dealStatus) {
 		try {
-			boolean r = UsedItemService.updateDealStatus(usedItemId, usedItemStatus);
+			boolean r = UsedItemService.updateDealStatus(usedItemId, dealStatus);
 			RunEndView.updateView(r, usedItemId);
-			Log.itemPriceUpdateCheck("Success", usedItemId, usedItemStatus);
+			Log.itemPriceUpdateCheck("Success", usedItemId, dealStatus);
 		} catch (SQLException e) {
 //			e.printStackTrace();
 			RunEndView.showError("현재 ID로 거래 상태 변경 오류, 재시도 하세요.");
@@ -126,7 +126,8 @@ public class UsedItemController {
 		while (!finish) {
 			System.out.println("\n  [[ W.E.L.C.O.M.E '진 상 마 켓' ]]\n"
 								+ "=================================="
-								+ "\n  ■ ■ ■ 원하는 항목을 선택:) ■ ■ ■\n"
+								+ "\n  ■ ■ ■ 원하는 항목을 선택:) ■ ■ ■"
+								+ "\n"
 								+ "\n 1. 모든 중고 거래 검색"
 								+ "\n 2. 모든 중고 물건 검색"
 								+ "\n 3. 특정 중고 물건 검색"
@@ -188,10 +189,10 @@ public class UsedItemController {
 				break;
 			}
 		}
-		scan.close();
 		try {
+			scan.close();
 			search.close();
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
