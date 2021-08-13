@@ -8,11 +8,11 @@ public class UsedItemUploadDTO {
 	private String sellerId;
 	private String buyerId;
 
-	public UsedItemUploadDTO() {
-	}
+	public UsedItemUploadDTO() {}
 
-	public UsedItemUploadDTO(int usedItemUploadId, String usedItemUploadName, String usedItemId, String sellerId,
-			String buyerId) {
+	public UsedItemUploadDTO(int usedItemUploadId, String usedItemUploadName,
+							 String usedItemId, String sellerId,
+							 String buyerId) {
 		this.usedItemUploadId = usedItemUploadId;
 		this.usedItemUploadName = usedItemUploadName;
 		this.usedItemId = usedItemId;

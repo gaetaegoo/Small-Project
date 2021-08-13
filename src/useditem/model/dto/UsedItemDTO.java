@@ -12,7 +12,7 @@ public class UsedItemDTO {
 	public UsedItemDTO() {}
 
 	public UsedItemDTO(String usedItemId, String usedItemName, String usedItemPrice, String usedItemCondition,
-			String usedItemDetail, String dealStatus) {
+					   String usedItemDetail, String dealStatus) {
 		this.usedItemId = usedItemId;
 		this.usedItemName = usedItemName;
 		this.usedItemPrice = usedItemPrice;

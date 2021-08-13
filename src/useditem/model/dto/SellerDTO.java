@@ -7,7 +7,9 @@ public class SellerDTO extends Member {
 
 	public SellerDTO() {}
 
-	public SellerDTO(String id, String name, String phone, String loc, String grade, String item, String dealType) {
+	public SellerDTO(String id, String name, String phone,
+					 String loc, String grade, 
+					 String item, String dealType) {
 		super(id, name, phone, loc, grade);
 		this.item = item;
 		this.dealType = dealType;

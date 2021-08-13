@@ -40,9 +40,9 @@ public class RunEndView {
 	// 정보 수정 성공, 실패 시 메세지 출력
 	public static void updateView(boolean result, String id) {
 		if (result) {
-			System.out.println("** 요청하신 " + id + " 수정 완료! **\n");
+			System.out.println("■ 성공적으로 수정되었습니다! ■\n");
 		} else {
-			System.out.println("** 요청하신 " + id + " 수정 실패, ID 재확인 하세요! **\n");
+			System.out.println("■ 수정 실패, ID를 재확인 해주세요! ■\n");
 		}
 	}
 

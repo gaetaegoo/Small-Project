@@ -1,6 +1,7 @@
 package useditem.model.dto;
 
 public class BuyerDTO extends Member {
+	
 	private String item;
 	private String dealType;
 

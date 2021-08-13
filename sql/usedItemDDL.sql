@@ -54,8 +54,6 @@ CREATE TABLE useditem_upload (
        buyer_id						VARCHAR2(20) NOT NULL
 );
 
---ALTER TABLE seller ADD FOREIGN KEY (item) REFERENCES useditem (useditem_id);
---ALTER TABLE buyer ADD FOREIGN KEY (item) REFERENCES useditem (useditem_id);
 ALTER TABLE useditem_upload ADD FOREIGN KEY (useditem_id) REFERENCES useditem (useditem_id);
 ALTER TABLE useditem_upload ADD FOREIGN KEY (seller_id) REFERENCES seller (seller_id);
 ALTER TABLE useditem_upload ADD FOREIGN KEY (buyer_id) REFERENCES buyer (buyer_id);

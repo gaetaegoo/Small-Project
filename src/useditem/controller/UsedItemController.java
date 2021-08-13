@@ -94,11 +94,11 @@ public class UsedItemController {
 			RunEndView.updateView(r, usedItemId);
 			Log.itemPriceUpdateCheck("Success", usedItemId, usedItemPrice);
 		} catch (SQLException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
 			RunEndView.showError("입력한 ID로 가격 변경 오류, 재시도 하세요!");
 		} catch (NotExistException e) {
-			e.printStackTrace();
-			RunEndView.showError("입력한 ID 확인 후 재시도 하세요!");
+//			e.printStackTrace();
+			RunEndView.showError("■ ■ ■ 물건 ID를 재확인 하세요:) ■ ■ ■");
 		}
 	}
 
@@ -109,11 +109,11 @@ public class UsedItemController {
 			RunEndView.updateView(r, usedItemId);
 			Log.itemPriceUpdateCheck("Success", usedItemId, usedItemStatus);
 		} catch (SQLException e) {
-			e.printStackTrace();
-			RunEndView.showError("현재 ID로 거래 상태 변경 오류, 재시도 하세요!");
+//			e.printStackTrace();
+			RunEndView.showError("현재 ID로 거래 상태 변경 오류, 재시도 하세요.");
 		} catch (NotExistException e) {
-			e.printStackTrace();
-			RunEndView.showError("입력한 ID 확인 후 재시도 하세요!");
+//			e.printStackTrace();
+			RunEndView.showError("■ ■ ■ 물건 ID를 재확인 하세요:) ■ ■ ■");
 		}
 	}
 
@@ -126,7 +126,7 @@ public class UsedItemController {
 		while (!finish) {
 			System.out.println("\n  [[ W.E.L.C.O.M.E '진 상 마 켓' ]]\n"
 								+ "=================================="
-								+ "\n  ■ ■ ■ 원하는 항목을 선택:D ■ ■ ■\n"
+								+ "\n  ■ ■ ■ 원하는 항목을 선택:) ■ ■ ■\n"
 								+ "\n 1. 모든 중고 거래 검색"
 								+ "\n 2. 모든 중고 물건 검색"
 								+ "\n 3. 특정 중고 물건 검색"
@@ -169,7 +169,6 @@ public class UsedItemController {
 					System.out.println("■ 수정하려는'물건 가격'입력! ■");
 					String itemPrice = search.readLine();
 					UsedItemController.updateUsedItemPrice(itemId, itemPrice);
-					System.out.println("■ 가격이 수정되었습니다! ■");
 					UsedItemController.getUsedItem(itemId);
 				}
 				if (number == 7) {
@@ -178,15 +177,14 @@ public class UsedItemController {
 					System.out.println("■ (판매중/예약중/판매완료)중 하나를 입력! ■");
 					String dealStatus = search.readLine();
 					UsedItemController.updateUsedItemStatus(itemId, dealStatus);
-					System.out.println("■ 거래 상태가 수정되었습니다! ■");
 					UsedItemController.getUsedItem(itemId);
 				}
 				if (number == 0) {
 					finish = true;
-					System.out.println("중고거래 검색을 종료합니다:D");
+					System.out.println("■ ■ ■ 중고거래 검색을 종료:) ■ ■ ■");
 				}
 			} catch (Exception e) {
-				System.out.println("ERROR: No such data. Please restart.");
+				System.out.println("■ ■ ■ 재시작 후 정확한 숫자를 입력:) ■ ■ ■");
 				break;
 			}
 		}

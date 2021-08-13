@@ -11,7 +11,6 @@ public class Member {
 	public Member() {}
 
 	public Member(String id, String name, String phone, String loc, String grade) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.phone = phone;
@@ -62,7 +61,7 @@ public class Member {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append(" 1)거래 ID: ");
+		builder.append(" 1)회원 ID: ");
 		builder.append(id);
 		builder.append("\n 2)이름: ");
 		builder.append(name);
