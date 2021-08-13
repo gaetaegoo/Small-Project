@@ -9,9 +9,9 @@ insert into seller values('seller2', '정치즈', '010-222-2222', '인천', '우수', '
 insert into seller values('seller3', '마슈슈', '010-333-3333', '경기', '신입', '인형', '택배');
 
 -- buyer insert[구매자 저장]
-insert into buyer values('buyer1', '이태경', '010-444-4444', '부산', '우수', '핸드폰', '택배');
-insert into buyer values('buyer2', '정은진', '010-555-5555', '서울', '신입', '텀블러', '직거래');
-insert into buyer values('buyer3', '마유진', '010-666-6666', '대구', '열심', '인형', '택배');
+insert into buyer values('buyer1', '오대식', '010-444-4444', '부산', '우수', '핸드폰', '택배');
+insert into buyer values('buyer2', '정마담', '010-555-5555', '서울', '신입', '텀블러', '직거래');
+insert into buyer values('buyer3', '곽두팔', '010-666-6666', '대구', '열심', '인형', '택배');
 
 -- useditem_upload insert[물건 업로드 저장]
 insert into useditem_upload values(useditem_upload_id_seq.nextval, '아이폰12', '핸드폰', 'seller1', 'buyer1');
